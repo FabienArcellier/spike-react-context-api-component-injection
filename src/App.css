@@ -15,13 +15,30 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+}
+
+.App-title {
+  background-color: #282c34;
+  margin-right: 40px;
+}
+
+.App-menu {
+  background-color: rgb(39, 105, 236);
+  padding: 0 40px;
+}
+
+.body {
+  background-color: lightgray;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-link {

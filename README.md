@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+## Inject component through Context API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+the goal of this spike is to validate that we can inject a component through React's Context API.
 
-## Available Scripts
+This pattern can be used to implement a menu that changes depending on the page where I am in the application.
 
-In the project directory, you can run:
+## references
 
-### `yarn start`
+* [Context Api](https://reactjs.org/docs/context.html)
+* [Application State Management with React](https://kentcdodds.com/blog/application-state-management-with-react)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    Managing state is arguably the hardest part of any application. It's why there are so many state management libraries available and more coming around every day (and even some built on top of others.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively)
 
-### `yarn test`
+    In Application State Management with React, I talk about how using a mix of local state and React Context can help you manage state well in any React application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## step 1 : build a complex canvas
 
-### `yarn build`
+![](docs/Selection_000401.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## step 2 : implement a context provider to customize menu content
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
