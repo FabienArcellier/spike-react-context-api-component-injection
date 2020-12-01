@@ -1,7 +1,11 @@
 import React from "react";
+import {useMenu} from "./ApplicationMenuContext";
 
 export const Menu = () => {
+    const menu = useMenu()
     return (
-        <React.Fragment>Empty Menu</React.Fragment>
+        <div>
+            { menu }
+        </div>
     )
 }
