@@ -2,10 +2,10 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {useConfigureMenu} from "./ApplicationMenuContext";
 
-export const Project = () => {
+export const About = () => {
     const [menu] = useState<JSX.Element>(
         <ul>
-            <li><Link to={"/about"}>About</Link></li>
+            <li><Link to="/">Project</Link></li>
         </ul>
     )
 
@@ -13,7 +13,7 @@ export const Project = () => {
 
     return (
         <React.Fragment>
-            Project Space
+            About space
         </React.Fragment>
     )
 }

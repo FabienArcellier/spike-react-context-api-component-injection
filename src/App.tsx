@@ -4,22 +4,33 @@ import {Project} from "./Project";
 import {Menu} from "./Menu";
 import {Title} from "./Title";
 import {ApplicationMenuContext} from "./ApplicationMenuContext"
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {About} from './About';
 
 function App() {
     const [menu, setMenu] = useState<JSX.Element>(<div>&nbsp;</div>)
 
     return (
-        <ApplicationMenuContext.Provider value={[menu, setMenu]}>
-            <div className="App">
-                <header className="App-header">
-                    <div className={"App-title"}><Title/></div>
-                    <div className={"App-menu"}><Menu/></div>
-                </header>
-                <div className={"body"}>
-                    <Project/>
+        <BrowserRouter>
+            <ApplicationMenuContext.Provider value={[menu, setMenu]}>
+                <div className="App">
+                    <header className="App-header">
+                        <div className={"App-title"}><Title/></div>
+                        <div className={"App-menu"}><Menu/></div>
+                    </header>
+                    <div className={"body"}>
+                        <Switch>
+                            <Route path={"/about"}>
+                                <About/>
+                            </Route>
+                            <Route path={"/"}>
+                                <Project/>
+                            </Route>
+                        </Switch>
+                    </div>
                 </div>
-            </div>
-        </ApplicationMenuContext.Provider>
+            </ApplicationMenuContext.Provider>
+        </BrowserRouter>
     );
 }
 
